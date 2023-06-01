@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiquetas estructurales</title>
+  </head>
+  <body>
+    <!-- ATAJO PARA CREAR UN ESPACIO COMO LOGO  -->
+
+    <img src="https://via.placeholder.com" alt="" />
+
+    <!-- PARA CREAR VARIAS ET A LA VEZ: ul>li*3>a -->
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">NOSOTROS</a></li>
+      <li><a href="#">CONTACTO</a></li>
+    </ul>
+
+    <!-- SEMANTICA DEL HTML: 
+
+        ETIQUETAS SEMANTICAS: 
+
+        *HEADER (DENTRO VA NAVBAR)*
+        NAVBAR
+
+       *MAIN (DENTRO VA SECTION)*
+        SECTION 
+        ARTICLE
+        
+        *FOOTER*
+        
+    DENTRO DE LAS SECTIONS CONVIENE PONER ARTICLES EN VEZ DE DIVS PORQUE LOS ARTICLES SON INDEPENDIENTES Y SE PUEDE, POR EJEMPLO, REPETIR UN H1 AUNQUE YA HAYA SIDO UTILIZADO EN EL BODY. EL ARTICLE TIENE QUE SERVIR PARA QUE SI SACO TODO LO DEMAS, EL ARTICLE PUEDA SEGUIR SIENDO LEGIBLE. 
+
+    DENTRO DE UN ARTICLE TAMBIEN PUEDE HABER SECCIONES Y A SU VEZ PUEDEN HABER ARTICLES DENTRO DE SECCIONES.
+    GENERALMENTE VAMOS A USAR, SECTION Y DENTRO DE SECTION EL ARTICLE-->
+
+    <section>
+      <!-- SIEMPRE LINKEAR EL ID DEL INPUT CON EL FOR DEL LABEL -->
+      <form action="#">
+        <div>
+          <label for="name">NOMBRE</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Juan Perez"
+            name="name"
+            required
+            autofocus
+          />
+          <!-- EL ATRIBUTO NAME SIRVE PARA SABER QUE LLEGA AL BACK -->
+        </div>
+
+        <div>
+          <label for="email">EMAIL</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+
+        <div>
+          <label for="tel">CELULAR</label>
+          <input type="tel" name="tel" id="tel" required />
+        </div>
+
+        <div>
+          <input type="button" value="SEND" />
+          <input type="reset" value="BORRAR" />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
